@@ -31,6 +31,7 @@ function QuestionCard(props:Props) {
     <div >
       <div style={{textAlign:"center"}}>
         <Hidden smUp>
+          <img src="static/logoBlack.png" style={{width: "40vw", paddingTop: "2vh"}}/>
           <div style={{marginTop:"10vh"}}>
             <h2 style={{color:"#555",fontFamily:"\'Sawarabi Mincho\', sans-serif"}}>{questionStr}</h2>
           </div>

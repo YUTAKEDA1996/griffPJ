@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
   React.useEffect(()=>{
-    location.href="/home"
+    location.href="/top"
   },[])
   return <div>Now Loading!</div>;
 }
