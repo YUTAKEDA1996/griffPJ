@@ -20,7 +20,7 @@ function QUESTION(props) {
         <Hidden smUp>
         <img src="static/logoBlack.png" style={{width: "70vw", paddingTop: "25vh"}}/>
         <Typography variant="h6" style={{color:"#555",margin:"-3vh",paddingTop:"-1vh"}}>パフォーマンスをハックする</Typography>
-        <div style={{paddingTop: "30vh",textAlign:"center"}}><Button variant="contained" style={{background:'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',margin:"0px 100px 0 100px"}}><Link href="/question"><p　style={{color:"#fff"}}>診断を開始</p></Link></Button></div>
+        <div style={{marginLeft:"20vw",width:"60vw",paddingTop: "30vh",textAlign:"center"}}><Button variant="contained" fullWidth={true} style={{background:'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)'}}><Link href="/question"><p　style={{color:"#fff"}}>診断を開始</p></Link></Button></div>
 
         </Hidden>
         <Hidden xsDown>

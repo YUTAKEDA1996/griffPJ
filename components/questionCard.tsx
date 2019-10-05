@@ -32,10 +32,10 @@ function QuestionCard(props:Props) {
       <div style={{textAlign:"center"}}>
         <Hidden smUp>
           <img src="static/logoBlack.png" style={{width: "40vw", paddingTop: "2vh"}}/>
-          <div style={{marginTop:"10vh"}}>
+          <div style={{marginTop:"5vh"}}>
             <h2 style={{color:"#555",fontFamily:"\'Sawarabi Mincho\', sans-serif"}}>{questionStr}</h2>
           </div>
-          <div style={{marginTop:"8vh"}}>
+          <div style={{marginTop:"5vh"}}>
             <Circle
               size={"200"}
               animationDuration={"1s"}
@@ -44,7 +44,7 @@ function QuestionCard(props:Props) {
               roundedStroke={true}
             />
           </div>
-          <div style={{marginTop:"10vh",marginLeft:"15vw"}}>
+          <div style={{marginTop:"5vh",marginLeft:"15vw"}}>
             {ansArray.map((ans,index)=>{return (
               <div key={"div"+index} style={{marginTop:"3vh",width:"70vw"}}>
               <Button onClick={()=>selectAns(index,setAns,setQuestionNumber)} variant="outlined" color="secondary" fullWidth={true} size="large" key={index} style={{color:"#6495ed",border:"6px,solid",borderRadius:"1em",borderColor:"#6495ed"}}>{ans}</Button>
