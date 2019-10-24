@@ -10,9 +10,6 @@ import Link from 'next/link';
 
 const firebase = require('firebase');
 firebase.initializeApp({
-  apiKey: 'AIzaSyB9-a7SICGfcYNXoYMC1olSDBa4leHExxw',
-  authDomain: 'project-381772633250',
-  projectId: 'ihack-test-api',
 });
 
 var db = firebase.firestore();
