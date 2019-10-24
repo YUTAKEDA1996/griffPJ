@@ -27,7 +27,7 @@ function graph(props:Props) {
       });
     }
 
-    const timer = setInterval(progress, 1000);
+    const timer = setInterval(progress, 1500);
     return () => {
       clearInterval(timer);
     };

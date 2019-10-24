@@ -27,13 +27,16 @@ function TOP(props) {
   // const classes = useStyles();
   const [ans, setAns] = useState("");
   const [questionNumber,setQuestionNumber]=useState(0)
-  const qusetinArray=["性別を教えてください","ここ一週間の平均睡眠時間は？","週に何回魚を食べますか?","週に何回お肉を食べますか?","あなたに足りてない物は?","Success!"]
+  const qusetinArray=["性別を教えてください","ここ一週間の平均睡眠時間は?","さんまやサバなどの青魚を週に何回食べますか?","牛や豚などのお肉は週に何回食べますか?","喫煙はされますか?","あなたに足りてない物は?","朝、疲労感を感じる時はありますか?","おおよその年齢を教えて下さい","準備が完了しました"]
   const ansArray=[
     ["男性","女性","その他"],
-    ["3時間未満","3~6時間,6~8時間"],
+    ["3時間未満","3~6時間","6~8時間"],
   ["食べない","1回〜3回","4~6回"],
   ["食べない","1回〜3回","4~6回"],
+  ["する","しない"],
   ["集中力","記憶力","瞬発力"],
+  ["感じない","時々","毎朝"],
+  ["20~30歳","30~40歳","40歳以上"],
   []
   
 ]
@@ -44,8 +47,8 @@ function TOP(props) {
     <div >
       <div style={{textAlign:"center"}}>
         <Hidden smUp>
-          <QuestionCard questionStr={qusetinArray[questionNumber]} ansArray={ansArray[questionNumber]} setAns={setAns} setQuestionNumber={setQuestionNumber} counter={questionNumber}/>
-          <KaruteButton hidden={questionNumber<5?true:false}/>
+          <QuestionCard questionStr={qusetinArray[questionNumber]} ansArray={ansArray[questionNumber]} setAns={setAns} setQuestionNumber={setQuestionNumber} counter={questionNumber} quesutionSum={Number(qusetinArray.length)}/>
+          <KaruteButton hidden={questionNumber<8?true:false}/>
         </Hidden>
         <Hidden xsDown>
           <p>ここからPCView</p>

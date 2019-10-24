@@ -7,6 +7,8 @@ import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button'
 import Link from 'next/link'
+import Particles from 'react-particles-js';
+
 
 
 function QUESTION(props) {
@@ -18,10 +20,12 @@ function QUESTION(props) {
     <div >
       <div style={{textAlign:"center"}}>
         <Hidden smUp>
-        <img src="static/logoBlack.png" style={{width: "70vw", paddingTop: "25vh"}}/>
-        <Typography variant="h6" style={{color:"#555",margin:"-3vh",paddingTop:"-1vh"}}>パフォーマンスをハックする</Typography>
-        <div style={{marginLeft:"20vw",width:"60vw",paddingTop: "30vh",textAlign:"center"}}><Button variant="contained" fullWidth={true} style={{background:'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)'}}><Link href="/question"><p　style={{color:"#fff"}}>診断を開始</p></Link></Button></div>
-
+        <img src="static/iHack_top.png" style={{width: "90vw", paddingTop: "15vh"}}/>
+        <div style={{marginTop:"5vh"}}>
+          <Particles params={{particles:{number:{value:15},color:{value:"#000000"},line_linked:{color:"#555555",distance:100}}}}/>
+        </div>
+        <div style={{marginLeft:"20vw",width:"60vw",paddingTop: "20vh",textAlign:"center"}}><Button variant="contained" fullWidth={true} style={{background:'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)'}}><Link href="/question"><p　style={{color:"#fff"}}>診断を開始</p></Link></Button></div>
+        
         </Hidden>
         <Hidden xsDown>
           <p>ここからPCView</p>

@@ -41,8 +41,8 @@ function Nutrients(props:{nutrientNames:String[],nutrientDiscriptions:String[],n
 
 function Result(props) {
   const nutrientNames=["ビタミンB3","L-トレニオン","バントテン酸Ca","BCAA"]
-  const nutrientDiscriptions=["タンパクタンパク質はカラダをつくる筋肉、内臓、皮膚、血液などカラダの主要な構成成分",
-  "ビタミン、タンパク質、脂質、糖質の分解や合成を助ける働きを持ち","脂質は摂り過ぎると肥満につながりますが、少量でも多くのエネルギーを得ることができる効率の良いエネルギー源","健康維持、体調管理には欠かせない栄養素です。ビタミンは、体内ではほとんど合成ができず、不足すると欠乏症となるおそれがあります。"]
+  const nutrientDiscriptions=["ビタミンB3は糖質・脂質・タンパク質の代謝に不可欠です。",
+  "必須アミノ酸の一つ。肝臓に脂肪を蓄積するのを防ぎます。","ビタミンの一種。糖分や脂質、たん白質などの代謝にかかわるほか、皮膚を正常にたもつ働きをします。","疲労感、筋肉痛の軽減の効果があります。また、運動時のパフォーマンスの維持にも繋がります。"]
   const nutrientImgs=["sanma.png","papurika.png","niku.png","kyabetu.png"]
 
   const titles=["糖質","脂質","ミネラル","ビタミン","タンパク質"]
@@ -58,7 +58,7 @@ function Result(props) {
           {
             titles.map((value,index) =>{
               return (
-                <div style={{marginTop:index==0?"5vh":"10vh",width:"90vw"}}>
+                <div key={index} style={{marginTop:index==0?"5vh":"10vh",width:"90vw"}}>
                   <Graph title={value} lowTag={lowTags[index]} highTag={highTags[index]}  resultValue={resultValues[index]} />
                 </div>
               )
