@@ -1,4 +1,5 @@
 import React from 'react'
+import DataStore from '../common/dataStore'
 import Document, {
     Head,
     Main,
@@ -6,11 +7,16 @@ import Document, {
 } from 'next/document'
 
 export default class MyDocument extends Document<any> {
-
+    init(){
+        var dst=new DataStore()
+        dst.dataStore()
+        console.log("通ってます！")
+    }
     render() {
         return (
             <html>
             <Head>
+                {this.init()}
                 <meta
                     name="viewport"
                     content="width=device-width,initial-scale=1,viewport-fit=cover"

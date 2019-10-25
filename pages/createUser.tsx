@@ -8,11 +8,19 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Link from 'next/link';
 
-const firebase = require('firebase');
-firebase.initializeApp({
-});
-
-var db = firebase.firestore();
+var firebaseConfig = {
+  apiKey: "AIzaSyB9-a7SICGfcYNXoYMC1olSDBa4leHExxw",
+  authDomain: "ihack-test-api.firebaseapp.com",
+  databaseURL: "https://ihack-test-api.firebaseio.com",
+  projectId: "ihack-test-api",
+  storageBucket: "ihack-test-api.appspot.com",
+  messagingSenderId: "381772633250",
+  appId: "1:381772633250:web:5da06e7391cca657b733fb",
+  measurementId: "G-Y9J8FYSQ9X"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 // Required for side-effects
 require('firebase/firestore');
